@@ -81,29 +81,29 @@ module "LB" {
   PUBLIC_ZONE_ID        = var.PUBLIC_ZONE_ID
 }
 
-//module "FRONTEND" {
-//  //depends_on            = [module.cart,module.catalogue,module.payment,module.shipping,module.user]
-//  source = "github.com/devopsravi9/tf-module-immutable-app"
-//  ENV                   = var.ENV
-//  PRIVATE_SUBNET_ID     = module.vpc.PRIVATE_SUBNET_ID
-//  VPC_ID                = module.vpc.VPC_ID
-//  ALLOW_SG_CIDR         = concat(module.vpc.PRIVATE_SUBNET_CIDR, module.vpc.PUBLIC_SUBNET_CIDR)
-//  COMPONENT             = "frontend"
-//  PORT                  = 80
-//  INSTANCE_TYPE         = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
-//  WORKSTATION_IP        = var.WORKSTATION_IP
-//  ASG_DESIRED           = var.INSTANCE_COUNT["FRONTEND"]["ASG_DESIRED"]
-//  ASG_MAX               = var.INSTANCE_COUNT["FRONTEND"]["ASG_MAX"]
-//  ASG_MIN               = var.INSTANCE_COUNT["FRONTEND"]["ASG_MIN"]
-//  LB_ARN                = module.LB.PUBLIC_LB_ARN
-//  LB_TYPE               = "public"
-//  PRIVATE_LB_DNS        = module.LB.PRIVATE_LB_DNS
-//  PRIVATE_ZONE_ID       = var.PRIVATE_ZONE_ID
-//  PRIVATE_LISTENER_ARN  = module.LB.PRIVATE_LISTENER_ARN
-//  PROMETHEUS_IP         = var.PROMETHEUS_IP
-//  APP_VERSION           = "2.0.0"
-//}
-//
+module "FRONTEND" {
+  //depends_on            = [module.cart,module.catalogue,module.payment,module.shipping,module.user]
+  source = "github.com/devopsravi9/tf-module-immutable-app"
+  ENV                   = var.ENV
+  PRIVATE_SUBNET_ID     = module.vpc.PRIVATE_SUBNET_ID
+  VPC_ID                = module.vpc.VPC_ID
+  ALLOW_SG_CIDR         = concat(module.vpc.PRIVATE_SUBNET_CIDR, module.vpc.PUBLIC_SUBNET_CIDR)
+  COMPONENT             = "frontend"
+  PORT                  = 80
+  INSTANCE_TYPE         = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
+  WORKSTATION_IP        = var.WORKSTATION_IP
+  ASG_DESIRED           = var.INSTANCE_COUNT["FRONTEND"]["ASG_DESIRED"]
+  ASG_MAX               = var.INSTANCE_COUNT["FRONTEND"]["ASG_MAX"]
+  ASG_MIN               = var.INSTANCE_COUNT["FRONTEND"]["ASG_MIN"]
+  LB_ARN                = module.LB.PUBLIC_LB_ARN
+  LB_TYPE               = "public"
+  PRIVATE_LB_DNS        = module.LB.PRIVATE_LB_DNS
+  PRIVATE_ZONE_ID       = var.PRIVATE_ZONE_ID
+  PRIVATE_LISTENER_ARN  = module.LB.PRIVATE_LISTENER_ARN
+  PROMETHEUS_IP         = var.PROMETHEUS_IP
+  APP_VERSION           = "2.0.0"
+}
+
 //module "cart" {
 //  source = "github.com/devopsravi9/tf-module-immutable-app"
 //  ENV                   = var.ENV
