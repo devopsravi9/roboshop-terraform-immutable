@@ -77,5 +77,4 @@ INSTANCE_COUNT = {
     ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
-
 }
