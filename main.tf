@@ -92,14 +92,16 @@ module "LB" {
 //  PORT                  = 80
 //  INSTANCE_TYPE         = var.INSTANCE_COUNT["FRONTEND"]["INSTANCE_TYPE"]
 //  WORKSTATION_IP        = var.WORKSTATION_IP
-//  INSTANCE_COUNT        = var.INSTANCE_COUNT["FRONTEND"]["COUNT"]
-//  //INSTANCE_COUNT        = 1
+//  ASG_DESIRED           = var.INSTANCE_COUNT["FRONTEND"]["ASG_DESIRED"]
+//  ASG_MAX               = var.INSTANCE_COUNT["FRONTEND"]["ASG_MAX"]
+//  ASG_MIN               = var.INSTANCE_COUNT["FRONTEND"]["ASG_MIN"]
 //  LB_ARN                = module.LB.PUBLIC_LB_ARN
 //  LB_TYPE               = "public"
 //  PRIVATE_LB_DNS        = module.LB.PRIVATE_LB_DNS
 //  PRIVATE_ZONE_ID       = var.PRIVATE_ZONE_ID
 //  PRIVATE_LISTENER_ARN  = module.LB.PRIVATE_LISTENER_ARN
 //  PROMETHEUS_IP         = var.PROMETHEUS_IP
+//  APP_VERSION           = "2.0.0"
 //}
 //
 //module "cart" {

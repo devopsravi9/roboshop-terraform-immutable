@@ -42,27 +42,39 @@ RABBITMQ_PORT = 5672
 
 INSTANCE_COUNT = {
   FRONTEND = {
-    COUNT = 1
+    ASG_DESIRED   = 1
+    ASG_MAX       = 1
+    ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
   USER = {
-    COUNT = 1
+    ASG_DESIRED   = 1
+    ASG_MAX       = 1
+    ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
   CART = {
-    COUNT = 1
+    ASG_DESIRED   = 1
+    ASG_MAX       = 1
+    ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
   CATALOGUE = {
-    COUNT = 1
+    ASG_DESIRED   = 1
+    ASG_MAX       = 1
+    ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
   SHIPPING = {
-    COUNT = 1
+    ASG_DESIRED   = 1
+    ASG_MAX       = 1
+    ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
   PAYMENT = {
-    COUNT = 1
+    ASG_DESIRED   = 1
+    ASG_MAX       = 1
+    ASG_MIN       = 1
     INSTANCE_TYPE = "t3.micro"
   }
 
