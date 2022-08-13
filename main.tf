@@ -187,7 +187,7 @@ module "shipping" {
   ASG_DESIRED           = var.INSTANCE_COUNT["SHIPPING"]["ASG_DESIRED"]
   ASG_MAX               = var.INSTANCE_COUNT["SHIPPING"]["ASG_MAX"]
   ASG_MIN               = var.INSTANCE_COUNT["SHIPPING"]["ASG_MIN"]
-  APP_VERSION           = "2.0.1"
+  APP_VERSION           = "2.0.0"
   LB_ARN                = module.LB.PRIVATE_LB_ARN
   LB_TYPE               = "private"
   PRIVATE_LB_DNS        = module.LB.PRIVATE_LB_DNS
