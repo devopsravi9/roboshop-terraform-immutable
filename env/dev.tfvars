@@ -69,7 +69,7 @@ INSTANCE_COUNT = {
     ASG_DESIRED   = 1
     ASG_MAX       = 1
     ASG_MIN       = 1
-    INSTANCE_TYPE = "t3.micro"
+    INSTANCE_TYPE = "t3.medium"
   }
   PAYMENT = {
     ASG_DESIRED   = 1
