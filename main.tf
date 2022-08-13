@@ -170,7 +170,7 @@ module "user" {
   PRIVATE_ZONE_ID       = var.PRIVATE_ZONE_ID
   PRIVATE_LISTENER_ARN  = module.LB.PRIVATE_LISTENER_ARN
   DOCDB_ENDPOINT        = module.docdb.DOCDB_ENDPOINT
-  REDIS_ENDPOINT       = module.elasticache.REDDIS_ENDPOINT
+  REDDIS_ENDPOINT        = module.elasticache.REDDIS_ENDPOINT
   PROMETHEUS_IP         = var.PROMETHEUS_IP
 }
 
